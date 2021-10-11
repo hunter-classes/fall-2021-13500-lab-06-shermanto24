@@ -5,5 +5,6 @@
 
 int main()
 {
+  //task A
   return 0;
 }
