@@ -16,8 +16,10 @@ char shiftChar(char c, int rshift)
       base = 97;
 
     int newshift = rshift % 26; //[0, 25]
-    if (c + newshift > base + 25) //if it's out of bounds
+    if (c + newshift > base + 25) //if it's positive out of bounds
       result = c + newshift - 26;
+    else if (c + newshift < base) //if it's negative out of bounds
+      result = c + newshift + 26;
     else //in bounds
       result = c + newshift;
   }
